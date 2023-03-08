@@ -1,7 +1,7 @@
 import RenderUi from "./RenderUi";
-let datalist = JSON.parse(localStorage.getItem("datalist")) || [];
 
 const AddData = (e) => {
+  let datalist = JSON.parse(localStorage.getItem("datalist")) || [];
   e.preventDefault();
   console.log(e.target.Status.value);
   const formData = {

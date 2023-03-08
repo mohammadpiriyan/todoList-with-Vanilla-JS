@@ -80,7 +80,6 @@ const Modal = () => {
                     element: "select",
                     id: "StatusInput",
                     className: "w-full rounded p-2 border",
-
                     name: "Status",
                     id: "",
                     child: [
