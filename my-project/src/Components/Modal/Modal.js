@@ -31,6 +31,7 @@ const Modal = () => {
             child: [
               El({
                 element: "input",
+                id: "taskNameInput",
                 className: "w-full rounded p-3 border",
                 placeholder: "Task Name",
               }),
@@ -47,6 +48,7 @@ const Modal = () => {
                       El({
                         element: "option",
                         value: "",
+                        id: "PriorityInput",
                         child: "Priority",
                       }),
                       El({
@@ -69,6 +71,7 @@ const Modal = () => {
 
                   El({
                     element: "select",
+                    id: "StatusInput",
                     className: "w-full rounded p-2 border",
                     name: "",
                     id: "",
@@ -98,6 +101,7 @@ const Modal = () => {
 
                   El({
                     element: "input",
+                    id: "DateInput",
                     className: "w-full rounded p-2 border",
                     type: "date",
                   }),
@@ -110,6 +114,7 @@ const Modal = () => {
                 cols: "50",
                 name: "",
                 className: "w-full rounded p-2 border",
+                id: "DetailInput",
                 child: "Detail",
               }),
             ],
@@ -132,6 +137,10 @@ const Modal = () => {
                 element: "button",
                 child: "Save",
                 variant: "contained",
+                onclick: () => {
+                  taskNameInput = document.getElementById("taskNameInput");
+                  
+                },
               }),
             ],
           }),
