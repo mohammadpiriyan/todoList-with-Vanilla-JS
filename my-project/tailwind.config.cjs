@@ -11,6 +11,8 @@ module.exports = {
     extend: {
       colors: {
         "purple-me": "rgb(98 0 234)",
+        "purple-input": "#7926ed",
+        "purple-input-hover": "#681fcf",
         "white-me": "#f1f3f3",
         "dark-me": "rgb(31 41 55)",
         "semidark-me": "rgb(75 85 99)",
