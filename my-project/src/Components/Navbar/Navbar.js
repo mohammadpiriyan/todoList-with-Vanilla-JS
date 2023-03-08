@@ -1,5 +1,4 @@
 import El from "../../library/El";
-import Button from "../Button/Button";
 import Input from "../input/input";
 
 const Navbar = () => {
@@ -57,6 +56,10 @@ const Navbar = () => {
                 element: "img",
                 className: "w-8",
                 src: "./src/icon/add.png",
+                onclick: () => {
+                  const modal = document.getElementById("modal");
+                  modal.classList.remove("hidden");
+                },
               }),
             ],
           }),

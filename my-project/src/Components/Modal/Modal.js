@@ -123,6 +123,10 @@ const Modal = () => {
                 element: "button",
                 child: "cancel",
                 variant: "outlined",
+                onclick: () => {
+                  const modal = document.getElementById("modal");
+                  modal.classList.toggle("hidden");
+                },
               }),
               Button({
                 element: "button",
