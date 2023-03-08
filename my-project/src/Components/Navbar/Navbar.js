@@ -6,7 +6,7 @@ const Navbar = () => {
   return El({
     element: "nav",
     className:
-      "w-full p-2 bg-purple-me lg:px-12 flex gap-40 justify-center shadow fixed z-10 justify-between items-center",
+      "w-full p-2 bg-purple-me lg:px-12 flex gap-40 justify-center shadow justify-between items-center",
     child: [
       El({
         element: "div",
