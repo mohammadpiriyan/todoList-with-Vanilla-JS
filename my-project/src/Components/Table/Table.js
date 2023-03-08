@@ -42,34 +42,9 @@ const Table = () => {
           }),
           El({
             element: "tbody",
+            id: "tbodyTable",
             className: "border-b border-neutral-200",
-            child: [
-              El({
-                element: "td",
-                className: "border-r px-6 py-4 border-neutral-200",
-                child: "walk",
-              }),
-              El({
-                element: "td",
-                className: "border-r px-6 py-4 border-neutral-200",
-                child: "low",
-              }),
-              El({
-                element: "td",
-                className: "border-r px-6 py-4 border-neutral-200",
-                child: "status",
-              }),
-              El({
-                element: "td",
-                className: "border-r px-6 py-4 border-neutral-200",
-                child: "1/1/1400",
-              }),
-              El({
-                element: "td",
-                className: "border-r px-6 py-4 border-neutral-200",
-                child: "button",
-              }),
-            ],
+            child: [],
           }),
         ],
       }),

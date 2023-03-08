@@ -1,5 +1,7 @@
 import El from "../../library/El";
 import Button from "../Button/Button";
+import AddData from "../Functions/AddData";
+import RenderUi from "../Functions/RenderUi";
 
 const Modal = () => {
   return El({
@@ -9,7 +11,9 @@ const Modal = () => {
       "w-screen h-screen backdrop-blur-sm absolute flex justify-center items-center hidden",
     child: [
       El({
-        element: "div",
+        element: "form",
+        id: "form",
+        onsubmit: AddData,
         className:
           "flex flex-col bg-white w-[45rem] items-center rounded justify-center gap-4 divide-y divide-slate-700",
         child: [
@@ -32,6 +36,7 @@ const Modal = () => {
               El({
                 element: "input",
                 id: "taskNameInput",
+                name: "task",
                 className: "w-full rounded p-3 border",
                 placeholder: "Task Name",
               }),
@@ -42,28 +47,30 @@ const Modal = () => {
                   El({
                     element: "select",
                     className: "w-full rounded p-2 border",
-                    name: "",
-                    id: "",
+                    name: "Priority",
+
                     child: [
                       El({
                         element: "option",
-                        value: "",
+                        value: "Priority",
                         id: "PriorityInput",
+                        disabled: true,
+                        selected: true,
                         child: "Priority",
                       }),
                       El({
                         element: "option",
-                        value: "",
+                        value: "Low",
                         child: "Low",
                       }),
                       El({
                         element: "option",
-                        value: "",
+                        value: "Medium",
                         child: "Medium",
                       }),
                       El({
                         element: "option",
-                        value: "",
+                        value: "Hight",
                         child: "Hight",
                       }),
                     ],
@@ -73,27 +80,30 @@ const Modal = () => {
                     element: "select",
                     id: "StatusInput",
                     className: "w-full rounded p-2 border",
-                    name: "",
+
+                    name: "Status",
                     id: "",
                     child: [
                       El({
                         element: "option",
-                        value: "",
+                        disabled: true,
+                        selected: true,
+                        value: "Status",
                         child: "Status",
                       }),
                       El({
                         element: "option",
-                        value: "",
+                        value: "Todo",
                         child: "Todo",
                       }),
                       El({
                         element: "option",
-                        value: "",
+                        value: "Doing",
                         child: "Doing",
                       }),
                       El({
                         element: "option",
-                        value: "",
+                        value: "Done",
                         child: "Done",
                       }),
                     ],
@@ -126,6 +136,7 @@ const Modal = () => {
             child: [
               Button({
                 element: "button",
+                type: "button",
                 child: "cancel",
                 variant: "outlined",
                 onclick: () => {
@@ -135,12 +146,10 @@ const Modal = () => {
               }),
               Button({
                 element: "button",
+                type: "submit",
                 child: "Save",
+                id: "saveButton",
                 variant: "contained",
-                onclick: () => {
-                  taskNameInput = document.getElementById("taskNameInput");
-                  
-                },
               }),
             ],
           }),
